@@ -10,12 +10,7 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
 }
-
-
-
 version = '0.1.0'
-
-
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -32,7 +27,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'devoir1.App'
+    mainClass = 'devoir2.App'
 }
 
 tasks.named('test') {
@@ -40,12 +35,11 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-
 tasks.named('jar') {
     manifest {
-        attributes('Implementation-Title': 'devoir1',
+        attributes('Implementation-Title': 'devoir2',
                    'Implementation-Version':' 0.1.0',
-                   'Main-class' : 'devoir1.App',
+                   'Main-class' : 'devoir2.App',
                    'Multi-Release': 'true'
                    )
     }
@@ -59,6 +53,3 @@ tasks.named('jar') {
 java {
     withSourcesJar()
 }
-
-
-
